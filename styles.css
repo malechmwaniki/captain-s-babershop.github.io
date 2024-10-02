@@ -15,17 +15,18 @@ section {
     padding: 60px 20px;
     text-align: center;
 }
-
+/* Home Section Background */
 #home {
     background-color: #f4f4f4;
     background-image: url('babershop.jpg');
-    background-position: fixed;
+    background-position: center; /* Changed from 'fixed' to 'center' for better responsiveness */
     background-repeat: no-repeat;
     background-size: cover;
     height: 80vh;
-    filter:brightness(0.8);
+    filter: brightness(0.8);
+    position: relative; /* To ensure that the .captain overlay is positioned correctly */
 }
- 
+
 /* Styling for the captain div as an overlay */
 .captain {
     position: absolute;
@@ -50,6 +51,60 @@ section {
     font-size: 4rem;
     letter-spacing: 5px;
 }
+
+/* Responsive Design: Medium screens (1024px and below) */
+@media (max-width: 1024px) {
+    #home {
+        height: 70vh; /* Reduce the height slightly for smaller screens */
+        background-position: center; /* Keep the background centered */
+    }
+
+    .captain p {
+        font-size: 1.8rem; /* Slightly smaller text */
+    }
+
+    .captain h1 {
+        font-size: 3.5rem;
+        letter-spacing: 4px; /* Reduce letter spacing for readability */
+    }
+}
+
+/* Responsive Design: Small screens (768px and below) */
+@media (max-width: 768px) {
+    #home {
+        height: 60vh; /* Reduce the height further for small screens */
+    }
+
+    .captain p {
+        font-size: 1.5rem; /* Smaller paragraph text */
+    }
+
+    .captain h1 {
+        font-size: 3rem; /* Smaller heading */
+        letter-spacing: 3px; /* Adjust spacing for smaller screens */
+    }
+}
+
+/* Responsive Design: Extra small screens (480px and below) */
+@media (max-width: 480px) {
+    #home {
+        height: 50vh; /* Reduce height for very small screens */
+    }
+
+    .captain p {
+        font-size: 1.2rem; /* Even smaller text for mobile devices */
+    }
+
+    .captain h1 {
+        font-size: 2.5rem; /* Reduce heading size for mobile */
+        letter-spacing: 2px; /* Further reduce letter spacing */
+    }
+
+    .captain {
+        padding: 15px; /* Reduce padding to save space on small screens */
+    }
+}
+
 
 /* Animation to slide text up */
 @keyframes slideIn {
