@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Website with Navbar and Toggle</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contacts.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+           <img src="baber-shopdesign.png" alt="logo-bb">
+        </div>
+        <div class="menu-icon" onclick="openNav()">
+            &#9776;
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" onclick="toggleSection('home')">Home</a></li>
+            <li><a href="#about-us" onclick="toggleSection('about-us')">About Us</a></li>
+            <li><a href="#services" onclick="toggleSection('services')">Services</a></li>
+            <li><a href="#gallery" onclick="toggleSection('gallery')">Gallery</a></li>
+            <li><a href="#contact" onclick="toggleSection('contact')">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Vertical Sliding Navbar for Small Screens -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#home" onclick="toggleSection('home')">Home</a>
+        <a href="#about-us" onclick="toggleSection('about-us')">About Us</a>
+        <a href="#services" onclick="toggleSection('services')">Services</a>
+        <a href="#gallery" onclick="toggleSection('gallery')">Gallery</a>
+        <a href="#contact" onclick="toggleSection('contact')">Contact</a>
+    </div>
+<!--home section-->
+    <section id="home" class="section active">
+            <div class="captain">
+                <p>- CAPTAIN'S -</p>
+                <h1>BABERSHOP</h1>
+            </div>
+    </section>
+
+    <section id="about-us" class="section">
+        <img src="bbg-3.jpg" alt="about.pic" class="about-img">
+        <div class="about-blog slide-up">
+            <h1>About Us</h1>
+            <p>Where style meets tradition. Our team of skilled barbers is dedicated to providing top-notch grooming services, from classic haircuts to modern styles, beard trims, and hot towel shaves. Located in the heart of [Your City], we offer a welcoming atmosphere for everyone, blending old-school charm with the latest techniques to ensure you leave feeling refreshed and confident. Join us for an exceptional grooming experience tailored to your style.</p>
+        </div>
+        <script src="slide.js"></script>        
+    </section>
+    
+bb
+    <section id="services" class="section">
+        <div class="services-container">
+            <h1>OUR SERVICES</h1>
+            <div class="service-item">
+                <span>Signature Haircut</span>
+                <span>ksh 225</span>
+            </div>
+            <div class="service-item">
+                <span>Haircut</span>
+                <span>ksh 200</span>
+            </div>
+            <div class="service-item">
+                <span>Beard Shaving</span>
+                <span>ksh 150</span>
+            </div>
+            <div class="service-item">
+                <span>Beard Trim</span>
+                <span>ksh 100</span>
+            </div>
+        </div>
+    </section>
+    
+    <section id="gallery" class="section">
+        <h1>Gallery</h1>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="bbg-1.jpg" alt="Gallery Image">
+                <div class="like-overlay">
+                    <i class="heart"></i>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="bbg-2.jpg" alt="Gallery Image">
+                <div class="like-overlay">
+                    <i class="heart"></i>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="babershop.jpg" alt="Gallery Image">
+                <div class="like-overlay">
+                    <i class="heart"></i>
+                </div>
+            </div>
+            
+        </div>
+  <div class="gallery-container">
+<!-- Add more gallery items as needed -->
+        <div class="gallery-item">
+            <img src="about-bbg.jpg" alt="Gallery Image">
+            <div class="like-overlay">
+                <i class="heart"></i>
+            </div>
+        </div>
+        <div class="gallery-item">
+                <img src="bb-4.jpg" alt="Gallery Image">
+                <div class="like-overlay">
+                    <i class="heart"></i>
+                </div>
+            </div>
+        <div class="gallery-item">
+                <img src="bb-5.jpg" alt="Gallery Image">
+                <div class="like-overlay">
+                    <i class="heart"></i>
+                </div>
+        </div>
+        <div class="gallery-item">
+            <img src="bbb-6.jpeg" alt="Gallery Image">
+            <div class="like-overlay">
+                <i class="heart"></i>
+            </div>
+        </div>
+        
+
+    </div>
+    </section>
+    <!--contact section-->
+        <section id="contact" class="section">
+            <div class="form-container">
+                <form action="#" method="post">
+                    <div class="row">
+                        <div class="col">
+                            <label for="first-name">First name *</label>
+                            <input type="text" id="first-name" name="first-name" required>
+                        </div>
+                        <div class="col">
+                            <label for="last-name">Last name *</label>
+                            <input type="text" id="last-name" name="last-name" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="col">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject">
+                        </div>
+                    </div>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <button type="submit">Book a service</button>
+                </form>
+            </div> 
+        </section>
+<!--info section-->
+<section id="barbershop-info" class="info-section">
+    <div class="info-container">
+        <!-- Single Box for Address, Social Media, and Opening Hours -->
+        <div class="info-box">
+            <!-- Address Section -->
+            <h2>Our Address</h2>
+            <p>123 Barber Street,<br>Cityville, CV123</p>
+
+            <!-- Social Media Section -->
+            <h2>Follow Us</h2>
+            <div class="social-media">
+                <a href="https://facebook.com" target="_blank"><img src="facebook.png" alt="Facebook"></a>
+                <a href="https://instagram.com" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+                <a href="https://twitter.com" target="_blank"><img src="twitter.png" alt="Twitter"></a>
+            </div>
+
+            <!-- Opening Hours Section -->
+            <h2>Opening Hours</h2>
+            <ul>
+                <li>Mon - Fri: 9:00 AM - 6:00 PM</li>
+                <li>Saturday: 9:00 AM - 5:00 PM</li>
+                <li>Sunday: Closed</li>
+            </ul>
+        </div>
+    </div>
+    <script src="info.js"></script>
+</section>
+
+<!--map section-->
+<section id="map-section"></section>
+    <h2 style="color: orange;
+               text-align: center;
+    ">Visit Our Location</h2>
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=PLACEHOLDER_LINK_HERE" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</section>
+<!-- WhatsApp Floating Icon -->
+<a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+    <img src="WHATS-.png" alt="WhatsApp">
+</a>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" class="back-to-top-btn" onclick="scrollToTop()">&#8679; Top</button>
+    <script src="script.js"></script>
+</body>
+<footer>
+    <div class="footer-container">
+        <div class="footer-section about">
+            <h3>About Us</h3>
+            <p>
+                We are a passionate team dedicated to providing the best services for our clients. Contact us for more information or follow us on our social media channels.
+            </p>
+        </div>
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <p>Email: captainbaber@gmail.com</p>
+            <p>Phone: +123-456-7890</p>
+            <p>Address: 123 Main St, City, Country</p>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 inter-webs | Designed by malech
+        </div>
+    </div>
+</footer>
+
+</html>

@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+    padding: 0%;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#home {
+    background-color: #f4f4f4;
+    background-image: url('babershop.jpg');
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    filter:brightness(0.8);
+}
+ 
+/* Styling for the captain div as an overlay */
+.captain {
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for overlay */
+    padding: 20px;
+    color: white;
+    opacity: 0; /* Start hidden */
+    animation: slideIn 1.5s ease-out forwards; /* Animation added */
+}
+
+/* Text style inside captain */
+.captain p {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.captain h1 {
+    font-size: 4rem;
+    letter-spacing: 5px;
+}
+
+/* Animation to slide text up */
+@keyframes slideIn {
+    from {
+        transform: translateY(100%); /* Start from below */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0); /* End in place */
+        opacity: 1;
+    }
+}
+
+/*slide-up*/
+.slide-up {
+    opacity: 0;
+    transform: translateY(50px); /* Start slightly below its normal position */
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.slide-up.active {
+    opacity: 1;
+    transform: translateY(0); /* Slide to its normal position */
+}
+
+/* General Section Styling */
+#services.section {
+    background-image: url('orange.jpg'); /* Add the mustache background image here */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+}
+
+/* Title Styling */
+#services h1 {
+    font-size: 3rem;
+    font-family: "Sofia", sans-serif;
+    font-weight: bold;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+/* Services Container Styling */
+.services-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Service Item Styling */
+.service-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    margin: 15px 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Horizontal lines */
+}
+
+/* Price Text Styling */
+.service-item span:last-child {
+    font-weight: bold;
+}
+
+.section {
+    padding: 20px;
+    text-align: center;
+}
+#gallery h1 {
+    color: orange;
+    font-family: "Sofia", sans-serif;
+    font-size: 5rem;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.like-overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.heart {
+    width: 20px;
+    height: 20px;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/833/833472.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.like-overlay:hover {
+    background-color: rgba(255, 0, 0, 0.7);
+}
+
+.liked .heart {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/833/833472.png');
+    filter: invert(21%) sepia(96%) saturate(5452%) hue-rotate(356deg) brightness(100%) contrast(119%);
+}
+
+/* General Section Styles */
+#contact {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('images-pattern.jpeg'); /* Replace with the actual pattern image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Form Container */
+.form-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent white */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 100%;
+}
+
+/* Form Layout */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.col {
+    flex: 1;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    background-color: white;
+    color: black;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #777;
+}
+
+/* Labels */
+label {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Button Styles */
+button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+}
+/* Back to Top Button Styling */
+.back-to-top-btn {
+    position: fixed;
+    bottom: 30px;
+   float: left;
+   left: 30px;
+    display: none;
+    background-color:orange;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+.back-to-top-btn:hover {
+    background-color: #0056b3;
+}
+

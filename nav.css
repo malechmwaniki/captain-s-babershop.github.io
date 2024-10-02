@@ -1,0 +1,133 @@
+
+nav {
+    background-color: #525151;
+    color: #fff;
+    padding: 0px;
+    height: 100px;
+    position: relative;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+   float: left;
+ width: 100px;
+ height: auto;
+ border-radius: 50%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    float: left;
+    margin-left: 200px;
+    margin-top: 50px;
+
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 14px;
+    transition: 0.3s;
+    font-family: "Sofia", sans-serif;
+}
+
+nav ul li a:hover {
+    color: orange;
+}
+
+/* Main Styles for Larger Screens */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+}
+
+/* Hide menu icon on larger screens */
+.menu-icon {
+    display: none;
+}
+
+/* Side Navigation for Small Screens (768px and below) */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color:orange;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Media Queries for Small Screens */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+    }
+
+    .sidenav a {
+        color: white;
+        font-family: "Sofia", sans-serif;
+    }
+
+    .sidenav a:hover {
+        color: orange;
+    }
+}
